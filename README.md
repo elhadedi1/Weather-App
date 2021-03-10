@@ -10,5 +10,6 @@ Weather Android App for getting data about current and forecast weather for 7 da
 <p><b>6. Using System units to convert the temperature and wind </b></p>
 <p><b>7. Using Language for change it </b></p>
 <p><b>8. Using GPS in settings to know about your location weather</b></p>
+<p><b>9. Using Google Map to the weather in the city you want</b></p>
 
 
