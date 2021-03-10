@@ -1,0 +1,59 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="Weather Location">
+
+        <SwitchPreferenceCompat
+            app:disableDependentsState="true"
+            app:key="USE_DEVICE_LOCATION"
+            app:summary="Allow the app to get your location"
+            app:title="Use device location"
+            app:defaultValue="true"
+            />
+
+        <SwitchPreference
+            app:key="MAP_LOCATION"
+            app:title="Map Location"
+            app:summary="Location from map"
+            app:defaultValue="false"
+            app:dependency="USE_DEVICE_LOCATION" />
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Notification and Alert">
+        <SwitchPreference
+            app:disableDependentsState="true"
+            app:key="USE_NOTIFICATIONS_ALERT"
+            app:summary="Allow the app to push notification about alert"
+            app:title="Use Notifications"
+            app:defaultValue="true"
+            />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="Units">
+        <ListPreference
+            app:defaultValue="STANDARD"
+            app:entries="@array/unitSystemEntries"
+            app:entryValues="@array/unitSystemValues"
+            app:key="UNIT_SYSTEM"
+            app:title="Unit system"
+            app:summary="%s"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Language">
+        <ListPreference
+            app:defaultValue="en"
+            app:entries="@array/langSystemEntries"
+            app:entryValues="@array/langSystemValues"
+            app:key="LANGUAGE_SYSTEM"
+            app:title="Language system"
+            app:summary="%s"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

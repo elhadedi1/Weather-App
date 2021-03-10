@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/weatherFragment"
+    android:icon="@drawable/ic_today"
+    android:title="Weather"
+        app:tint="#D9DFDF"/>
+
+    <item android:id="@+id/favoriteFragment"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="Favourtie"
+        app:tint="#D9DFDF"/>
+
+    <item android:id="@+id/alarmFragment"
+        android:icon="@drawable/ic_baseline_alarm_24"
+        android:title="Alarm"
+        app:tint="#D9DFDF"/>
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings"
+        app:tint="#D9DFDF" />
+
+
+
+
+
+
+</menu>

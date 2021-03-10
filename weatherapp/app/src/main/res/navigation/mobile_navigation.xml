@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/weatherFragment">
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.app.weatherapp.mvvm.ui.WeatherFragment"
+        android:label="Home" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.app.weatherapp.mvvm.ui.FavoriteFragment.FavoriteFragment"
+        android:label="Favourite"
+        tools:layout="@layout/favorite_fragment">
+        <action
+            android:id="@+id/action_favoriteFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment"
+            app:popUpTo="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment"
+            app:popUpTo="@id/weatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.app.weatherapp.mvvm.ui.SettingsFragment.SettingsFragment"
+        android:label="Settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_mapsFragment2"
+            app:destination="@id/mapsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.app.weatherapp.mvvm.ui.FavoriteFragment.MapsFragment"
+        android:label="Maps"
+        tools:layout="@layout/fragment_maps">
+        <action
+            android:id="@+id/action_mapsFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment"
+            app:popUpTo="@id/weatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alarmFragment"
+        android:name="com.app.weatherapp.mvvm.ui.AlarmFragment.AlarmFragment"
+        android:label="Alarm"
+        tools:layout="@layout/alarm_fragment" >
+        <action
+            android:id="@+id/action_alarmFragment_to_editAlarmFragment"
+            app:destination="@id/editAlarmFragment"
+            app:popUpTo="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_alarmFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment"
+            app:popUpTo="@id/weatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.app.weatherapp.mvvm.ui.FavoriteFragment.HomeFragment"
+        android:label="Weather Detail"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_homeFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment"
+            app:popUpTo="@id/weatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment2"
+        android:name="com.app.weatherapp.mvvm.ui.SettingsFragment.MapsFragment2"
+        android:label="fragment_maps2"
+        tools:layout="@layout/fragment_maps2" >
+        <action
+            android:id="@+id/action_mapsFragment2_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editAlarmFragment"
+        android:name="com.app.weatherapp.mvvm.ui.AlarmFragment.EditAlarmFragment"
+        android:label="EditAlarmFragment" >
+        <action
+            android:id="@+id/action_editAlarmFragment_to_alarmFragment"
+            app:destination="@id/alarmFragment"
+            app:popUpTo="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_editAlarmFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment"
+            app:popUpTo="@id/weatherFragment" />
+    </fragment>
+</navigation>

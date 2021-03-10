@@ -1,0 +1,26 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="unitSystemValues">
+        <item>STANDARD</item>
+        <item>METRIC</item>
+        <item>IMPERIAL</item>
+
+    </string-array>
+
+    <string-array name="unitSystemEntries">
+        <item>Kelvin &amp; meter/sec</item>
+        <item>Celsius &amp; meter/sec</item>
+        <item>Fahrenheit &amp; miles/hour</item>
+    </string-array>
+
+    <string-array name="langSystemValues">
+        <item>EN</item>
+        <item>AR</item>
+    </string-array>
+
+    <string-array name="langSystemEntries">
+        <item>en</item>
+        <item>ar</item>
+    </string-array>
+
+</resources>
